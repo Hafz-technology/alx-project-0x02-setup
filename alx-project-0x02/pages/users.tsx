@@ -13,7 +13,7 @@ export default function UsersPage() {
       try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users');
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`HTTP error! getStaticProps(): ${response.status}`);
         }
         const data: UserProps[] = await response.json();
         setUsers(data);
