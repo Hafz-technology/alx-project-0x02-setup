@@ -1,27 +1,30 @@
-// pages/users/index.tsx
-import React from 'react';
 import Header from '@/components/layout/Header';
-// import Footer from '@/components/layout/Footer';
+import Card from '@/components/common/Card';
 
-
-interface homePageProps {
-  home: homePageProps[]; // Define props for the component
-}
-
-const homePage: React.FC<homePageProps> = ({  }) => {
+export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <>
       <Header />
-      <main className="flex-grow container mx-auto p-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">home</h1>
-     
+      <main className="container mx-auto p-4">
+        <h1 className="text-4xl font-bold text-center my-8">Welcome to the Home Page!</h1>
+        <section className="my-8">
+          <h2 className="text-2xl font-semibold mb-4">Explore Our Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card
+              title="Dynamic Components"
+              content="Build highly reusable and interactive components with ease using React and TypeScript."
+            />
+            <Card
+              title="Efficient Styling"
+              content="Leverage the power of Tailwind CSS for rapid and utility-first styling."
+            />
+            <Card
+              title="Seamless Routing"
+              content="Navigate between pages smoothly with Next.js's built-in Pages Router."
+            />
+          </div>
+        </section>
       </main>
-      {/* <Footer /> */}
-    </div>
+    </>
   );
-};
-
-
-
-export default homePage;
-
+}
