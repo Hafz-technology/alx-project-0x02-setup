@@ -13,17 +13,12 @@ const Header: React.FC = () => {
 
           <ul className="flex space-x-6">
             <li className="hover:underline">
-              <Link href="/about">Posts</Link>
+              <Link href="/aboutPage">About</Link>
             </li>
             <li className="hover:underline">
-              <Link href="/home">Posts</Link>
+              <Link href="/alx-project-0x02/pages/home.tsx">Home</Link>
             </li>
-            <li className="hover:underline">
-              <Link href="/posts">Posts</Link>
-            </li>
-            <li className="hover:underline">
-              <Link href="/users">Users</Link>
-            </li>
+    
 
 
           </ul>
